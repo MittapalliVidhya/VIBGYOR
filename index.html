@@ -1,0 +1,657 @@
+<html>
+<head>
+    <link href="./index.css" rel="stylesheet"/>
+</head>
+<body>
+    <header id="main_header"> 
+        <!-- Logo -->
+        <img src="./imagesvib/vibimg.png"/>
+
+        <!-- Right side container for buttons + nav -->
+        <div class="header-right">
+
+            <!-- Buttons -->
+            <a href="#" class="enquiry-btn">
+               
+
+                ENQUIRY FORM</a>
+               
+            <a href="#" class="login-btn">PARENT LOGIN</a>
+
+            <!-- Nav menu below buttons -->
+            <nav id="main_nav"> 
+                <ul>
+                    <li>HOME</li>
+                    <li class="has-submenu">ABOUT US</li>
+
+                    <li class="has-submenu">TEACHING & LEARNING</li>
+                    <li class="has-submenu">EXPLORE</li>
+                    <li class="has-submenu">ADMISSIONS</li>
+                    <li class="has-submenu">MEDIA</li>
+                    <li>CONTACT US</li>
+                </ul>
+            </nav>
+        </div> <!-- close header-right -->
+    </header>
+
+
+<div class="image-box">
+  <button class="arrow left" onclick="prevImg()">&#10094;</button>  
+  <img id="pic1" src="./imagesvib/1.jpg" alt="Slideshow">
+  <button class="arrow right" onclick="nextImg()">&#10095;</button> 
+</div>
+
+ <script>
+let i = 1; // current image index
+
+function changeImg() {
+  const p = document.getElementById("pic1");
+
+  if (i == 1) {
+    p.src = "./imagesvib/2.webp";
+    i = 2;
+  } else if (i == 2) {
+    p.src = "./imagesvib/3.webp";
+    i = 3;
+  } else if (i == 3) {
+    p.src = "./imagesvib/4.webp";
+    i = 4;
+  } else if (i == 4) {
+    p.src = "./imagesvib/3.webp";
+    i = 5;
+  } else if (i == 5) {
+    p.src = "./imagesvib/5.webp"; // loop back to 3
+    i = 6;
+  } else if (i == 6) {
+    p.src = "./imagesvib/6.webp";
+    i = 7;
+  } else if (i == 7) {
+    p.src = "./imagesvib/1.jpg";
+    i = 1;
+  }
+}// close function changeImg()
+
+
+// Right arrow (next)
+function nextImg() {
+  changeImg();
+}
+
+// Left arrow (previous)
+function prevImg() {
+  const p = document.getElementById("pic1");
+
+  if (i == 1) {
+    p.src = "./imagesvib/1.jpg";
+    i = 7;
+  } else if (i == 7) {
+    p.src = "./imagesvib/6.webp";
+    i = 6;
+  } else if (i == 6) {
+    p.src = "./imagesvib/3.webp";
+    i = 3;
+  } else if (i == 5) {
+    p.src = "./imagesvib/4.webp";
+    i = 4;
+  } else if (i == 4) {[]
+    p.src = "./imagesvib/3.webp";
+    i = 3;
+  } else if (i == 3) {
+    p.src = "./imagesvib/2.webp";
+    i = 2;
+  } else if (i == 2) {
+    p.src = "./imagesvib/1.jpg";
+    i = 1;
+  }
+}
+
+// Auto-slide every 3 seconds
+setInterval(changeImg, 3000);
+
+// Show first image initially
+document.getElementById("pic1").src = "./imagesvib/1.jpg";
+</script>
+
+
+
+
+
+
+
+
+
+
+<div class="discover-section">
+  <p class="discover-text">
+    Discover the Best Preschools and Top ICSE, CBSE & CIE Schools in <span>India</span>
+  </p>
+
+  <!-- ==== ABOUT US SECTION ==== -->
+<div class="about-row">
+  <div class="about-left">
+    <div class="line"></div>
+    <h2>About us</h2>
+    <p>
+      VIBGYOR is more than just an institution; it's a catalyst for nurturing the holistic development of young minds.
+      With a deep-rooted commitment to fostering cognitive, intellectual, artistic, and athletic prowess, we create an
+      enriching environment where students flourish. But we don't stop there. We go beyond academic excellence,
+      instilling moral and cultural values that shape responsible global citizens of tomorrow.
+    </p>
+    <button class="learn-btn">LEARN MORE</button>
+  </div>
+
+<div id="main_img">
+  <!-- Animations -->
+<img src="./imagesvib/about-home-slider-icon1.png" class="top-left-float-icon">
+
+
+<img src="./imagesvib/about-home-slider-icon2.png" class="left-bounce-icon">
+
+<img src="./imagesvib/about-home-slider-icon3.png" class="bottom-icon">
+  <img src="./imagesvib/about-home-slider-icon4.png" class="green-anim">
+
+
+  <img src="./imagesvib/about-home-slider-icon5.png" class="red-plus">
+<!--Images-->
+  <img src="./imagesvib/about-slider-img3.webp" class="carousel-img active">
+  <img src="./imagesvib/about-slider-img2.jpg" class="carousel-img">
+  <img src="./imagesvib/about-slider-img1.webp" class="carousel-img">
+
+  
+</div>
+</div>
+<script>
+let j = 0;
+const images = document.querySelectorAll('#main_img .carousel-img');
+
+function changeImg() {
+  // remove 'active' from all images
+  images.forEach(img => img.classList.remove('active'));
+
+  // image switching logic
+  if (j === 0) {
+    j = 1;
+  } else if (j === 1) {
+    j = 2;
+  } else if (j === 2) {
+    j = 0;  // go back to first image
+  }
+
+  // show the current image
+  images[j].classList.add('active');
+}
+
+// change image every 2 seconds
+setInterval(changeImg, 2000);
+</script>
+
+
+
+
+<!--29/10/2025-->
+
+<div class="main-box">
+
+      <div class="line"></div>
+
+
+  <h2>Making your child future ready</h2>
+
+<div class="left-box">
+  <div class="row">
+    <div class="col">
+      <img src="./imagesvib/child-future-icon1.png" alt="Growing Network">
+       <p>GROWING NETWORK</p>
+      </div>
+    <div class="col double">
+      <img src="./imagesvib/child-future-icon2.png" alt="State-of-the-Art Infrastructure">
+      <p>STATE-OF-THE-ART INFRASTRUCTURE</p>    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <img src="./imagesvib/child-future-icon3.png" alt="Unmatched Safety Measures">
+      <p>UNMATCHED SAFETY MEASURES</p>    </div>
+    <div class="col">
+      <img src="./imagesvib/child-future-icon4.png" alt="Holistic Development">
+      <p>HOLISTIC DEVELOPMENT</p>    </div>
+    <div class="col">
+      <img src="./imagesvib/child-future-icon5.png" alt="Ideal Teacher Student Ratio">
+      <p>IDEAL TEACHER STUDENT RATIO</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col double">
+      <img src="./imagesvib/child-future-icon6.png" alt="Choice of Education Boards">
+      <p>CHOICE OF EDUCATION BOARDS</p>    </div>
+    <div class="col ">
+<img src="./imagesvib/child-future-icon7.png" alt="Global Curriculum">
+      <p>GLOBAL CURRICULUM</p>    </div>
+  </div>
+      <button class="view-btn">VIEW MORE</button>
+
+</div>
+
+
+
+  <div class="right-box">
+      <img id="childImg" src="./imagesvib/child-future-ready1.png" alt="Child Future Ready">
+
+  </div>
+
+</div>
+
+  <script>
+    let k = 1; // current image index
+
+    function changeChildImg() {
+      const img = document.getElementById("childImg");
+
+      if (k === 1) {
+        img.src = "./imagesvib/child-future-ready2.png";
+        k = 2;
+      } else if (k === 2) {
+        img.src = "./imagesvib/child-future-ready3.webp";
+        k = 3;
+      } else {
+        img.src = "./imagesvib/child-future-ready1.png";
+        k = 1;
+      }
+    }
+
+    // change every 2 seconds
+    setInterval(changeChildImg, 2000);
+  </script>
+  
+
+
+
+  <!--31/10/2025-->
+
+
+  <div class="sub1-box">
+
+      <div class="line"></div>
+
+
+  <h2>Our ways. Our methods. Our difference.</h2>
+  
+  <div class="left-div">
+         <div class="first-div">
+            <div class="img-container"> 
+        <a href="#"> 
+          <img src="./imagesvib/education-img1.webp" class="zoom-img" alt="">
+
+          <span class="img-label purple">Academics ></span>
+
+        </a>
+          </div>
+        </div>
+
+    
+        <div class="second-div">
+          <div class="img-container"> 
+        <a href="#"> 
+          <img src="./imagesvib/education-img2.webp" class="zoom-img" alt="">
+          <span class="img-label blue">Teaching Methods ></span>
+
+        </a>
+        </div>
+     </div>
+ 
+
+  </div>
+
+
+
+  </div>
+
+  <div class="middle-div">
+
+  
+
+    <h3>A Holistic approach to education at VIBGYOR</h3>
+
+    <p>
+      At VIBGYOR Group of Schools, we believe in education that nurtures the whole child—intellectual, social, physical, emotional, and spiritual. Our unique approach encompasses four key pillars: Academics, Events and Activities, Teaching Faculty, and Infrastructure. We empower students with a robust academic curriculum, while offering a wealth of events and activities to foster their passions.
+    </p>
+
+        <a href="#" class="view-more">View More</a>
+      
+
+
+  </div>
+
+  <div class="right-div">
+
+         <div class="third-div">
+            <div class="img-container"> 
+        <a href="#"> 
+          <img src="./imagesvib/education-img3.webp" class="zoom-img" alt="">
+            <span class="img-label green">Events ></span>
+
+        </a>
+        </div>
+        </div>
+        <div class="fourth-div">
+              <div class="img-container"> 
+        <a href="#"> 
+          <img src="./imagesvib/education-img4.webp" class="zoom-img" alt="">
+          <span class="img-label orange">Infrastructure ></span>
+
+        </a>
+        </div>
+
+ 
+    </div>
+  </div>
+
+  </div>
+
+
+
+
+    <!--01/11/2025-->
+
+
+
+    
+  <div class="school-box">
+
+      <div class="line"></div>
+
+
+  <h2>Our Schools</h2>
+
+    <div id="crss_rotate">  </div>
+
+    <div id="crs_rotate">  </div>
+
+
+
+
+      <div id="worldacademy-div" class="school-card">
+        <img class="logo" src="./imagesvib/vibgyor-world-academy.webp" alt="World Academy Logo">
+              <div class="image-box">
+
+                  <a href=""> 
+                    <img class="main-img" src="./imagesvib/image6.webp" alt="World Academy Image">
+                  </a>
+                        <div class="info-box blue">
+                          <span class="grade-text">CIE: Grade I to V</span>
+                          <span class="explore-btn">EXPLORE</span>
+                        </div>
+
+              </div>
+      </div>
+
+      <div id="worldajunior-div" class="school-card">
+       <img class="logo" src="./imagesvib/vibgyor-world-junior.jpg" alt="World Academy Logo">
+
+              <div class="image-box">
+
+                    <a href=""> 
+                      <img class="main-img" src="./imagesvib/image7.webp" alt="World junior Image">
+                    </a>
+                        <div class="info-box purple">
+                          <span class="grade-text">Playschool to Sr. KG</span>
+                          <span class="explore-btn">ENGAGE</span>
+                        </div>
+              </div>
+      </div>
+
+      <div id="high-div" class="school-card">
+         <img class="logo" src="./imagesvib/vibgyor-high-logo.png" alt="World Academy Logo">
+              <div class="image-box">
+      
+                    <a href=""> 
+                        <img class="main-img" src="./imagesvib/our-brand-img1.webp" alt="World Academy Image">
+                    </a>
+                  <div class="info-box violet">
+                    <span class="grade-text">CBSE, CISCE, CIE: Grade I to XII</span>
+                    <span class="explore-btn">LOOK BEYOND</span>
+                  </div>
+              </div>
+      </div>
+
+      <div id="kids-div" class="school-card">
+          <img class="logo" src="./imagesvib/vibgyor-kids-logo.png" alt="World Academy Logo">
+
+              <div class="image-box">
+
+                  <a href=""> 
+                    <img class="main-img" src="./imagesvib/our-brand-img2.webp" alt="World Academy Image">
+                  </a>
+                  <div class="info-box orange">
+                    <span class="grade-text">Playschool to Sr. KG</span>
+                    <span class="explore-btn">START HERE</span>
+                  </div>
+              </div>
+      </div>
+
+      <div id="rise-div" class="school-card">
+         <img class="logo" src="./imagesvib/vibgyor-rise-logo.png" alt="World Academy Logo">
+              <div class="image-box">
+
+                  <a href=""> 
+                    <img class="main-img" src="./imagesvib/our-brand-img3.webp" alt="World Academy Image">
+                  </a>
+                  <div class="info-box green">
+                    <span class="grade-text">CBSE: Grade I to XII</span>
+                    <span class="explore-btn">DISCOVER MORE</span>
+                  </div>
+
+              </div>
+      </div>
+
+      <div id="roots-div" >
+         <img class="logo" src="./imagesvib/vibgyor-roots-logo.png" alt="World Academy Logo">
+             <div class="image-box">
+
+                  <a href=""> 
+                  <img class="main-img" src="./imagesvib/our-brand-img4.webp" alt="World Academy Image">
+                  </a>
+                   <div class="info-box pink">
+                      <span class="grade-text">Playschool to Sr. KG</span>
+                      <span class="explore-btn">BE CURIOUS</span>
+                    </div>
+              </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!--01/11/2025-->
+
+<div class="awards-box">
+  <div class="line"></div>
+  <h1>Awards & Accolades</h1>
+
+    <div class="awards-container" id="awardCarousel">
+    <button class="prev-btn"> prev </button>
+
+    <div class="award-card">
+      <a href="" > 
+        <img src="./imagesvib/K-12_Education_Group_of_the_Year_2025.mob.webp" alt=""><div class=" award-info">K12 Education Group of the year We are K-12 Education Group of the Year      </div>
+        </a>
+    </div>
+    <div class="award-card">
+      <a href=""> 
+          <img src="./imagesvib/Award_Post_RK_1000x1000.mob.webp" alt=""><div class="award-info">Lifetime Achievement Mr. Rustom Kerawalla Honoured with Lifetime Achievement Award</div>
+          </a>
+    </div>
+    <div class="award-card">
+      <a href=""> 
+          <img src="./imagesvib/Award__ET_NOW_Iconic_Brands_of_2025.mob.webp" alt=""><div class="award-info">Winning Laurels! VIBGYOR Group of Schools recognised as ET NOW Iconic Brands of 2025 </div>
+      </a>
+    </div>
+    <div class="award-card">
+      <a href=""> 
+        <img src="./imagesvib/Award_Template_ETEEA.mob.webp" alt=""><div class="award-info">Honoured to share VIBGYOR Group of Schools won Gold at the Economic Times Education Excellence Awards 2025.</div>
+      </a>
+    </div>
+    <div class="award-card">
+      <a href="">     
+        <img src="./imagesvib/school_chain_of_the_year.mob.webp" alt=""><div class="award-info">VIBGYOR Group of Schools wins “School Chain of the Year – National” at the India Education Awards and Summits 2025 presented by Financial Express.</div>
+      </a>
+    </div>
+    <div class="award-card">
+      <a href=""> 
+        <img src="./imagesvib/AWARD_POST_1080x1080-min.mob.webp" alt=""><div class="award-info">VIBGYOR Group of Schools wins Gold at the second edition of The Economic Times Education TechEdu India Awards 2025.</div>
+        </a>
+    </div>
+        <button class="next-btn"></button>
+
+  </div>
+    <button class="view-more-btn">VIEW MORE</button>
+
+  </div>
+<script>
+let l = 0;
+const cards = document.querySelectorAll(".award-card");
+const container = document.getElementById("awardCarousel");
+
+function showImages() {
+  container.innerHTML = "";
+
+  // Logic for sliding
+  if (l === 0) {
+    container.append(cards[0].cloneNode(true));
+    container.append(cards[1].cloneNode(true));
+    container.append(cards[2].cloneNode(true));
+  } else if (l === 1) {
+    container.append(cards[1].cloneNode(true));
+    container.append(cards[2].cloneNode(true));
+    container.append(cards[3].cloneNode(true));
+  } else if (l === 2) {
+    container.append(cards[2].cloneNode(true));
+    container.append(cards[3].cloneNode(true));
+    container.append(cards[4].cloneNode(true));
+  } else if (l === 3) {
+    container.append(cards[3].cloneNode(true));
+    container.append(cards[4].cloneNode(true));
+    container.append(cards[5].cloneNode(true));
+  } else if (l === 4) {
+    container.append(cards[4].cloneNode(true));
+    container.append(cards[5].cloneNode(true));
+    container.append(cards[0].cloneNode(true));
+  } else if (l === 5) {
+    container.append(cards[5].cloneNode(true));
+    container.append(cards[0].cloneNode(true));
+    container.append(cards[1].cloneNode(true));
+  }
+
+  l++;
+  if (l > 5) l = 0;
+}
+
+showImages();
+setInterval(showImages, 2000); // change every 2 seconds
+</script>
+
+  
+</div>
+
+
+<!--12/11/2025-->
+
+
+<div class="careers-box">
+  <div class="line"></div>
+  <h1>Careers at VIBGYOR</h1>
+ 
+
+</div>
+
+        <div id="mainn_img">
+          <!-- Animations -->
+        <img src="./imagesvib/about-home-slider-icon1.png" class="topp-left-float-icon">
+
+
+        <img src="./imagesvib/about-home-slider-icon2.png" class="leftt-bounce-icon">
+
+        <img src="./imagesvib/about-home-slider-icon3.png" class="bottomm-icon">
+          <img src="./imagesvib/about-home-slider-icon4.png" class="greenn-anim">
+
+
+          <img src="./imagesvib/about-home-slider-icon5.png" class="redd-plus">
+          
+          <img src="./imagesvib/carrers-img1.jpg" class="item">
+        </div>
+
+
+        <div id="mainn_text">
+
+         <h2> Join our team</h2> 
+         <p>
+            Are you ready to be a part of something extraordinary? At VIBGYOR Group of Schools, we are on a mission to shape responsible global citizens of tomorrow, and we invite you to join us in this transformative journey. We seek out expert, passionate, and pioneering professionals who are ready to make a lasting impact in the lives of our students. Whether you're an educator, administrator, or specialist in your field, we provide a platform for you to unleash your potential and ignite the brilliance within each student. Together, let's create a future that inspires, empowers, and changes the world, one student at a time.
+         </p>
+
+         <button class="apply-btn">Apply Now</button>
+
+        </div>
+
+</div>
+
+
+<!--13/11/2025-->
+
+
+<div class="featured-box">
+  <div class="line"></div>
+  <h1>Featured In</h1>
+ 
+
+  <div class="carousel-container">
+
+    <button class="prev">&#10094;</button>
+    
+    <div class="carousel-track">
+
+      
+
+      <img src="./imagesvib/client-logo1.jpg" alt="">
+      <img src="./imagesvib/client-logo2.jpg" alt="">
+      <img src="./imagesvib/client-logo3.jpg" alt="">
+      <img src="./imagesvib/client-logo4.jpg" alt="">
+      <img src="./imagesvib/client-logo5.jpg" alt="">
+      <img src="./imagesvib/client-logo6.jpg" alt="">
+
+      <img src="./imagesvib/client-logo7.jpg" alt="">
+      <img src="./imagesvib/client-logo8.jpg" alt="">
+      <img src="./imagesvib/client-logo9.jpg" alt="">
+      <img src="./imagesvib/client-logo10.jpg" alt="">
+      <img src="./imagesvib/client-logo11.jpg" alt="">
+      <img src="./imagesvib/client-logo12.jpg" alt="">
+      <img src="./imagesvib/client-logo13.jpg" alt="">
+      <img src="./imagesvib/client-logo14.jpg" alt="">
+
+
+
+     
+      <!-- duplicate for continuous loop 
+      <img src="./imagesvib/client-logo1.jpg" alt="">
+      <img src="./imagesvib/client-logo2.jpg" alt="">
+      <img src="./imagesvib/client-logo3.jpg" alt="">
+      <img src="./imagesvib/client-logo4.jpg" alt="">
+      <img src="./imagesvib/client-logo5.jpg" alt="">
+
+      -->
+    </div>
+  </div>
+
+<button class="next">&#10095;</button>
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
